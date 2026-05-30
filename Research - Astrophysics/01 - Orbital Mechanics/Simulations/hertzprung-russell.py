@@ -32,6 +32,8 @@ def plot_s(naam,garam,roshni):  #function to plot the temperatures and luminosit
         else:
             calculated_colors.append('red') # Cool/Red Dwarf or Giant
 
+
+
 # Plot using the calculated list
     plt.style.use('dark_background')  #dark background
     plt.scatter(garam,roshni, label="Stars", color=calculated_colors, s=150)
