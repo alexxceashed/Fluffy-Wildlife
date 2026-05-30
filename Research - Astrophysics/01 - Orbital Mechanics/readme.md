@@ -10,10 +10,10 @@ This repository tracks the first phase of an intensive 5-week Computational Astr
 | ✅ | **Universal Orbit Script** | Coding | Developed `universal_orbit.py` with AU/Solar Mass support. |
 | ✅ | **Crash-Proof Logic** | Robustness | Implemented `try-except` blocks for all user inputs. |
 | ✅ | **Escape Velocity** | Physics | Built a secondary module for $v_e$ calculations across 3 regimes. |
-| 🚧 | **Mission Control** | Logic | `if/elif/else` decision tree for probe deployment. |
-| 🚧 | **Solar System Plot** | Viz | Matplotlib implementation of $a^3$ vs $T^2$. |
-| 🚧 | **H-R Diagram Intro** | Viz | Initial Temperature vs. Luminosity scatter plotting. |
-| 🚧 | **Mass-Luminosity** | Modeling | Scripting the $L \approx M^{3.5}$ relationship. |
+| ✅ | **Mission Control** | Logic | `if/elif/else` decision tree for probe deployment. |
+| ✅ | **Solar System Plot** | Viz | Matplotlib implementation of $a^3$ vs $T^2$. |
+| ✅ | **H-R Diagram Intro** | Viz | Initial Temperature vs. Luminosity scatter plotting. |
+| ✅ | **Mass-Luminosity** | Modeling | Scripting the $L \approx M^{3.5}$ relationship. |
 | ✅ | **Portfolio Architecture**| DevOps | Established a professional research-grade folder structure. |
 
 ---
