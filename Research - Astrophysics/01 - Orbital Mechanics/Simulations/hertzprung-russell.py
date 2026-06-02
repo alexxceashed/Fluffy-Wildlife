@@ -52,6 +52,6 @@ def plot_s(naam,garam,roshni):  #function to plot the temperatures and luminosit
     plt.title("Hertzprung-Russell Diagram")  #Title of the diagram.
     plt.xlabel("Temperature")
     plt.ylabel("Luminosity")
-    plt.legend()   #Labels assigned.
+    plt.legend()   #Labels assigned.    
     plt.show()
 main()
