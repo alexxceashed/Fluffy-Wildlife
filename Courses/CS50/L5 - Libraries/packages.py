@@ -17,4 +17,4 @@ if len(s.argv) == 2:
 if len(s.argv) > 2:
     cw.trex(f"Hello, {s.argv[1]} {s.argv[2]}")
 
-p
+
