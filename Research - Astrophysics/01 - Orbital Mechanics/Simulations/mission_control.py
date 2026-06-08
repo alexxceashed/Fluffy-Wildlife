@@ -3,15 +3,22 @@ G = 6.674*(10**-11)
 def main():
     while True:
         try:
-            planet_mass_SM = float(input("Enter Mass (SM): "))   #Prompts User for Mass in SolarMass Units
+            planet_mass_SM = float(input("Enter Mass (Solar Masses): ")) 
+            planet_radius_AU = float(input("Enter Radius(Astronomical Units): ")) #Prompts User for Radius in Astronomical Units  #Prompts User for Mass in SolarMass Units
+            if planet_mass_SM or planet_radius_AU <= 0:
+                raise ZeroDivisionError
             planet_mass = 1.989e30*planet_mass_SM #Converts SM to Metric Unit(kg) for calculations
-            planet_radius_AU = float(input("Enter Radius(AU): ")) #Prompts User for Radius in Astronomical Units
+            
             planet_radius = 1.496e11*planet_radius_AU #Converts AU to Metric Unit(m) for calculations
             probe_velocity = float(input("Enter Probe Velocity (m/s): "))  #Prompts Probe Velocity to determine it's fate.
         except ValueError:
             print("Invalid Entry")
             continue
+        except ZeroDivisionError:
+            print("Mass or Radius cannot be Zero!")
+            continue
         break
+
     v_e = ev(planet_mass, planet_radius)   #calls ev function to calculate escape velocity of the object by passing in mass and radius of the planet.
     v_c = cv(planet_mass, planet_radius)   #calls cv function to calculate circular velocity of the object by passing in mass and radius of the planet
     decision_tree = dt(v_e, v_c, probe_velocity) #calls dt function to determine fate of the probe, and prints it.
