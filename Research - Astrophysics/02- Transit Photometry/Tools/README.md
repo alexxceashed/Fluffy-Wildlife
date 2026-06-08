@@ -119,7 +119,15 @@ It also includes a CLI `main()` that asks for manual input and prints results.
 3. Use `variable_finder.py` to run the transit search and compute candidate properties.
 4. If needed, use `exoplanet_profiler.py` to manually verify your radius calculations with known values.
 
-## Troubleshooting
+## AI Usage Guidelines
+
+This codebase has been developed with AI assistance in certain areas. The following sections were developed or refined with AI support:
+
+- **`transit_math()` function in `variable_finder.py`** — The core transit search pipeline, including light curve flattening logic, BLS parameter selection, peak identification, and physics calculations, was designed and implemented with AI assistance. AI helped clarify the workflow, optimize parameter choices, and ensure robust handling of edge cases (e.g., zero flux values, low SNR transits).
+
+All other code sections were written directly without AI assistance.
+
+**Transparency note:** When AI was used to develop or significantly refactor code, it has been explicitly tagged with **[AI-Assisted]** in the docstring or comments. This guideline ensures clarity about the origin and development process of each component.
 
 - If `variable_finder.py` returns an unrealistic planet radius, verify that:
   - the FITS file contains a real light curve (`PDCSAP_FLUX` is preferred)
