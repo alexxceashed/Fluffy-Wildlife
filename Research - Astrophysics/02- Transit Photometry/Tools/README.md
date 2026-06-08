@@ -31,25 +31,35 @@ python -m pip install astropy numpy scipy matplotlib wotan
 
 ### `variable_finder.py`
 
-This is the main analysis script.
+This is the main analysis script, organized into three functions:
 
-1. Prompts for a FITS file name and locates the file in the script directory.
-2. Reads the primary FITS header and extracts stellar parameters:
-   - `TEFF` (effective temperature)
-   - `RADIUS`
-   - `LOGG` (surface gravity)
-3. Computes stellar luminosity, mass, and surface gravity using simple scaling relations.
-4. Loads the light curve from the second HDU (`[1].data`) and selects a flux column in this order:
-   - `PDCSAP_FLUX`
-   - `LC_INIT`
-   - `SAP_FLUX`
+**`main()`** — orchestrates the workflow by calling `filename()`, `stellar_maths()`, and `transit_math()`, then prints the final results.
+
+**`filename()`** — prompts the user for a FITS file name and searches the script directory recursively to locate it.
+
+**`stellar_maths(file)`** — reads the FITS header and computes stellar properties:
+
+1. Extracts `TEFF`, `RADIUS`, and `LOGG` from the primary HDU.
+2. Applies the Stefan-Boltzmann law to estimate luminosity relative to the Sun.
+3. Uses the mass-luminosity relation ($M = L^{1/3.5}$) to estimate stellar mass.
+4. Calculates surface gravity using Newton's law of gravitation.
+5. Returns temperature, radius, luminosity, mass, and surface gravity.
+
+**`transit_math(file, Mass, Radius)` — _AI-assisted function_** — performs the core transit search pipeline:
+
+1. Loads the light curve from the second HDU (`[1].data`) and selects a flux column in this priority order:
+   - `PDCSAP_FLUX` (preferred: pipeline-processed)
+   - `LC_INIT` (custom calibration)
+   - `SAP_FLUX` (raw aperture photometry)
    - fallback to the first column containing `FLUX`
-5. Cleans the data by removing NaN values and non-positive flux values.
-6. Flattens the light curve using `wotan.flatten`.
-7. Runs `astropy.timeseries.BoxLeastSquares` over a period range of 2.5 to 4.0 days and a set of durations.
-8. Uses `scipy.signal.find_peaks` to identify the top BLS power peaks.
-9. Prints the top period candidates and selects the strongest peak.
-10. Calculates orbital radius and planet radius using `exoplanet_profiler.orbital_radius` and `planet_radius`.
+2. Cleans the data by removing NaN and non-positive flux values.
+3. Flattens the light curve using `wotan.flatten` with biweight method to remove instrumental trends.
+4. Runs `astropy.timeseries.BoxLeastSquares` over a period range of 2.5 to 4.0 days with a range of transit durations.
+5. Uses `scipy.signal.find_peaks` to identify the top BLS power peaks and displays the top 3 candidates.
+6. Selects the strongest peak as the best transit candidate.
+7. Computes signal-to-noise ratio (SNR) if available and warns if SNR < 7.0.
+8. Calculates orbital radius and planet radius using `exoplanet_profiler` functions.
+9. Returns orbital radius, planet radius, and transit period.
 
 **Important notes:**
 
@@ -57,6 +67,7 @@ This is the main analysis script.
 - It is designed for targets where a ~2.5–4 day period transit signal is expected.
 - The `planet_radius()` formula assumes the depth represents a fractional transit depth and that the stellar radius is in units of solar radii.
 - If the result is an impossible radius, double-check the selected depth, the input FITS file type, and whether the file contains a properly processed light curve.
+- **[AI-Assisted]** The `transit_math` function structure, light curve flattening logic, and BLS parameter selection were developed with AI assistance to ensure robust period search and accurate depth extraction.
 
 ### `fits_parser.py`
 
