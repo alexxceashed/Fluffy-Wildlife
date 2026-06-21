@@ -54,9 +54,9 @@ A compact utility for trigonometry calculations. This file is a small reference 
 
 ## 🚀 Research - Astrophysics
 
-This folder contains the summer astrophysics research work. Each numbered folder corresponds to a weekly module. The numbers are not direct week names, but they represent the order of the modules in the summer series.
+This folder contains the summer astrophysics research work. Each numbered folder corresponds to a weekly module, and the number before each folder name is the week number.
 
-This work was completed during summer vacation, and the folder names serve as module identifiers for the summer learning path. Future astrophysics projects created after summer vacation will be stored in new folders so they remain separate from the summer modules.
+This work was completed during summer vacation, and the folder names serve as module identifiers for the summer learning path. Work is still in progress, and future astrophysics projects created after summer vacation will be stored in new folders to keep post-summer work separate from the summer modules.
 
 ### Week mapping
 
@@ -64,7 +64,7 @@ This work was completed during summer vacation, and the folder names serve as mo
 - `02- Transit Photometry` — Week 2 content, for working with astronomical data.
 - `03- Astrophysical Modeling` — Week 3 content, focusing on reusable models and tools.
 
-> Note: The numbered folder names are project identifiers, and the text of the folder describes the module topic. For example, `02- Transit Photometry` was completed in Week 4 of the summer progression.
+> Note: The numbered folder names are project identifiers, and the text of the folder describes the module topic. For example, `02- Transit Photometry` corresponds to the Week 2 module during the summer progression.
 
 ### `Research - Astrophysics/01 - Orbital Mechanics`
 This module builds the physics foundation for orbital mechanics and defensive scripting.
