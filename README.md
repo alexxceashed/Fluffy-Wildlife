@@ -1,56 +1,155 @@
-# 🌌 Astrophysics & Computer Science Portfolio
+﻿# 🌌 Fluffy-Wildlife
 
-Welcome to my central repository! This workspace tracks my journey through computer science fundamentals and applied computational astrophysics. It serves as a living portfolio of my coursework, programming experiments, and scientific simulations.
+Welcome to Fluffy-Wildlife, a learning portfolio combining computer science coursework and applied astrophysics research. This repository was developed largely during summer vacation, and it tracks both structured course practice and experimental scientific coding.
 
-The repository is divided into two main branches: **Courses** (foundational learning) and **Astrophysics Research** (applied physics and data programming).
+## 📁 Repository Overview
 
----
+The repository contains these top-level folders:
 
-## 📂 1. Courses
+- `Courses/` — foundational programming coursework and project-based learning.
+- `Calculators/` — small standalone calculator scripts.
+- `Research - Astrophysics/` — summer vacation astrophysics modules, organized by week.
 
-This directory contains code written while studying computer science and data visualization. 
-
-### `cs50/` (CS50: Introduction to Computer Science)
-This folder contains my progress through Harvard's CS50 curriculum. 
-* **Contents:** Lecture follow-alongs, experimental scripts, and self-produced practice code exploring data structures, memory management, algorithms, and Python logic.
-* **Note on Academic Honesty:** In strict adherence to CS50's academic honesty policy, **this folder does not contain any solutions to graded Problem Sets (Psets).** It is purely a sandbox for lecture concepts and personal experimentation.
-
-### `matplotlib/` (Data Visualization)
-This folder tracks my mastery of the `matplotlib` library in Python, which is the backbone of my astrophysics research.
-* **Contents:** Lecture codes, syntax practice, and self-produced experimental graphs.
-* **Skills Covered:** Logarithmic scaling, scatter plots, array manipulation, custom color-mapping, and scientific plot formatting.
+This README documents each folder in detail, the ideas behind the code, and how the weekly astrophysics modules map to the project structure.
 
 ---
 
-## 🚀 2. Astrophysics Research
+## 🎓 Courses
 
-This directory is where computer science meets the cosmos. The current module, **`01 - Orbital Mechanics`**, is structured functionally into four dedicated sub-directories to maintain a professional, scalable research environment:
+### `Courses/CS50`
+This folder contains exercises and exploratory scripts from the Harvard CS50 Python track. It is organized by lecture and concept, so the folder structure reflects a natural learning progression.
 
-### `derivations/` (Theoretical Foundations)
-The math happens here before it ever touches the code. 
-* **Purpose:** Contains the mathematical proofs, conceptual derivations, and theoretical groundwork for the physics engines.
-* **Contents:** Documentation and notes explaining the equations behind orbital velocity limits ($v = \sqrt{GM/r}$), Kepler's Third Law ($P^2 \propto a^3$), and Stellar Power Laws ($L \approx M^{3.5}$).
+Subfolders:
+- `L0 - Variables and Functions/` — Python basics, input/output, arithmetic, and simple functions.
+- `L1 - Conditionals/` — decision logic with `if`, `elif`, and `else`.
+- `L2 - Loops/` — repetition using `for` and `while`, list traversal, and loop patterns.
+- `L3  - Exceptions/` — handling errors and validating user input with `try`/`except`.
+- `L4 - Libraries/` — importing modules, using packages, and applying library functions.
+- `L5 - Unit Tests/` — test-driven practice, writing assertions, and validating code behavior.
+- `L6 - File IO/` — reading from and writing to files, plus simple CSV/text handling.
+- `L7 - Regular Expressions/` — pattern matching and string validation for text processing.
+- `L8 - OOP/` — classes, inheritance, encapsulation, and object-oriented design.
 
-### `simulations/` (Visual Astrophysics)
-This folder houses the primary programs that visually model astrophysical phenomena, turning pure math into scientific charts and decision trees.
-* **Contents:** * `hertzprung-russell.py`: A dynamic H-R diagram generator mapping Stellar Temperature vs. Luminosity to categorize stars into their evolutionary stages.
-  * `luminosity.py`: Demonstrates the exponential mass-luminosity relationship across multiple orders of magnitude.
-  * `mission_control.py`: The main Gravity and Orbital Dynamics Engine. It calculates circular/escape velocities and simulates probe trajectories (Crash, Orbit, or Escape).
-  * `solar_system_plot.py`: Visually proves Kepler's Third Law using log-log plots.
+Each CS50 subfolder contains multiple scripts that preserve the learning process and demonstrate the concepts for that week.
 
-### `tools/` (Utility Scripts & Calculators)
-The backend logic and computational calculators that process specific parameters.
-* **Contents:** * `escape_velocity_calculator.py`: A dedicated script to compute the exact velocity required to escape a celestial body's gravitational well.
-  * `orbital_period.py`: Calculates the theoretical orbital periods of planets and satellites based on orbital distance and host mass.
+### `Courses/Matplotlib`
+This folder is dedicated to data visualization practice using `matplotlib`.
 
-### `validation/` (Quality Assurance & Output Proofs)
-Where the code is tested and proven against reality. 
-* **Purpose:** This folder contains the **proof of code in detail**. It acts as the visual and mathematical validation that all scripts in the simulations and tools folders execute correctly.
-* **Contents:** Verified graphical outputs confirming script accuracy:
-  * `hertzprung_russell_diagram1.png` & `hertzprung_russell_diagram2.png`: Proof of accurate star classification, color mapping, and log scaling.
-  * `kepler_plot.png` & `orbital periods.png`: Validation of Kepler's 3rd Law mechanics.
-  * `mass vs luminosity.png`: Proof of the stellar power law generation.
-  * `mission_control.png`: Console/terminal proof verifying the orbital decision tree logic.
+Key topics include:
+- scatter plots and line plots,
+- axis labels, titles, and legends,
+- plotting styles and colors,
+- scientific chart formatting and presentation.
+
+These examples support the astrophysics research by building visualization literacy.
 
 ---
-*End of transmission. Portfolio architecture mapped and ready.*
+
+## 🔢 Calculators
+
+### `Calculators/trigonometry.py`
+A compact utility for trigonometry calculations. This file is a small reference implementation for using Python math functions and practicing formula-driven programming.
+
+---
+
+## 🚀 Research - Astrophysics
+
+This folder contains the summer astrophysics research work. Each numbered folder corresponds to a weekly module. The numbers are not direct week names, but they represent the order of the modules in the summer series.
+
+### Week mapping
+
+- `01 - Orbital Mechanics` — Week 1 content and foundational mechanics.
+- `02- Transit Photometry` — Week 2 content, for working with astronomical data.
+- `03- Astrophysical Modeling` — Week 3 content, focusing on reusable models and tools.
+
+> Note: The numbered folder names are project identifiers, and the text of the folder describes the module topic. For example, `02- Transit Photometry` was completed in Week 4 of the summer progression.
+
+### `Research - Astrophysics/01 - Orbital Mechanics`
+This module builds the physics foundation for orbital mechanics and defensive scripting.
+
+Contains:
+- `Derivations/` — handwritten mathematical derivations and physics notes.
+- `Simulations/` — code that generates orbital plots, H-R diagrams, and mission logic.
+- `Tools/` — helper scripts such as escape velocity calculators and orbital period formulas.
+- `Validation/` — screenshots, graphs, and validations that prove the simulations and formulas work.
+
+This is the most physics-focused module, emphasizing equations, unit conversions, and robust code.
+
+### `Research - Astrophysics/02- Transit Photometry`
+This module focuses on transit photometry and exoplanet detection.
+
+Contains:
+- `Improved Scripts/` — refined versions of transit search scripts and improved data pipelines.
+- `Tools/` — FITS file parsers, light curve plotters, data downloaders, and transit candidate utilities.
+- `Validation/` — output screenshots and validation images that show how the pipeline performs.
+
+This section is data-intensive and uses actual astrophysical data formats.
+
+### `Research - Astrophysics/03- Astrophysical Modeling`
+This module contains reusable models and interactive tools for astrophysical workflows.
+
+Contains:
+- `Objects/` — physics models, such as the `CelestialBody` class.
+- `Tools/` — interactive utilities for cleaning FITS light curves (`cleanup.py`), computing cosmological distances (`redshift.py`), querying SIMBAD (`SAMBAD.py`), and simulating gravity (`gravity.py`).
+
+This module is designed to be practical and extensible, with supporting documentation in `Tools/README.md`.
+
+---
+
+## 🧰 AI Usage Warning
+
+AI has only been used to help me understand the code and make the code more efficient. The learning curve was large here, and AI was used to assist me whenever I couldn't seem to get through the problem or the code.
+
+This repository is still my own work, but AI helped clarify concepts, improve structure, and support debugging when needed.
+
+---
+
+## 📌 How to Use This Repository
+
+1. Start with `Courses/CS50` to follow the programming learning progression.
+2. Explore `Courses/Matplotlib` for visualization practice.
+3. Use `Research - Astrophysics/01 - Orbital Mechanics` for physics modeling and simulation.
+4. Use `Research - Astrophysics/02- Transit Photometry` for FITS data and transit detection.
+5. Use `Research - Astrophysics/03- Astrophysical Modeling` for reusable physics tools and catalog lookup.
+
+Run scripts from the folder where they are stored to ensure any relative paths resolve properly.
+
+---
+
+## ⚙️ Dependencies
+
+Packages commonly used in this repository:
+
+- `numpy`
+- `matplotlib`
+- `astropy`
+- `astroquery`
+- `scipy`
+- `wotan`
+
+Install the core environment with:
+
+```bash
+python -m pip install numpy matplotlib astropy astroquery scipy wotan
+```
+
+---
+
+## 📝 Notes
+
+- The astrophysics work was completed during summer vacation.
+- `Research - Astrophysics/02- Transit Photometry` corresponds to Week 4 content even though the folder prefix says `02`.
+- `Research - Astrophysics/03- Astrophysical Modeling` includes Week 3-style modeling tools and reusable object code.
+- The folder structure was designed to separate learning exercises from research tools.
+
+---
+
+## 📍 Useful starting points
+
+- `Courses/CS50` — programming fundamentals and practice.
+- `Courses/Matplotlib` — visualization examples.
+- `Research - Astrophysics/01 - Orbital Mechanics` — physics derivations and simulations.
+- `Research - Astrophysics/02- Transit Photometry/Tools/README.md` — detailed transit photometry tool instructions.
+- `Research - Astrophysics/03- Astrophysical Modeling/Tools/README.md` — detailed guidance for Week 3 utilities.
+
+This README is intended to provide a detailed, high-level overview of the repository and how each folder contributes to the overall portfolio.
