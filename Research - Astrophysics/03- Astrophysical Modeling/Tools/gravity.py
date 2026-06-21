@@ -24,7 +24,7 @@ def force(bodyA, bodyB):
     displacement = bodyA.position - bodyB.position  #Vector3D object
     r = np.linalg.norm(displacement)
 
-    F_mag = (G*bodyA.mass*bodyB.mass)/r
+    F_mag = (G*bodyA.mass*bodyB.mass)/(r**2)
     return F_mag *(displacement/r)
 
 if __name__=="__main__":
