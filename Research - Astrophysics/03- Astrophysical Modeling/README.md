@@ -32,4 +32,5 @@ Minimum recommended Python version: **Python 3.8+**.
 
 - `Tools/README.md` contains the detailed descriptions for the utility scripts.
 - `Objects/` contains supporting physics models and reusable code.
+- `Validation/` contains the test cases and evidence that the tools successfully passed the intended scenario validation.
 - Internet access is required for `Tools/SAMBAD.py`.

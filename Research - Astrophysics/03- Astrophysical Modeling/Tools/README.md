@@ -43,7 +43,8 @@ python celestial_body.py
 An execution script that simulates gravitational interactions across an extended timeline.
 
 - **Logic:** Prompts for two distinct objects using `CelestialBody.get()` (e.g., a Sun and a planet).
-- **Physics Loop:** Calculates mutual attraction using a vectorized execution of Newton's Law of Universal Gravitation ($F = G \cdot m_1 \cdot m_2 / r^2$).
+- **Physics Loop:** Calculates gravitational attraction from the star toward the planet.
+- **Star Behavior:** This is a basic simulation where the star is held fixed in place and only the planet is updated each step.
 - **Time Step Engine:** Advances the simulation loop across 365 daily increments (`dt = 1.0`), printing periodic telemetry tracking updates to the terminal every 30 days.
 Bash
 
