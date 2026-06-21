@@ -56,6 +56,8 @@ A compact utility for trigonometry calculations. This file is a small reference 
 
 This folder contains the summer astrophysics research work. Each numbered folder corresponds to a weekly module. The numbers are not direct week names, but they represent the order of the modules in the summer series.
 
+This work was completed during summer vacation, and the folder names serve as module identifiers for the summer learning path. Future astrophysics projects created after summer vacation will be stored in new folders so they remain separate from the summer modules.
+
 ### Week mapping
 
 - `01 - Orbital Mechanics` — Week 1 content and foundational mechanics.
