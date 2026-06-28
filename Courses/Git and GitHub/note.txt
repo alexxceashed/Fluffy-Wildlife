@@ -1,0 +1,10 @@
+Git - VCS(Version Control System) is a tool that allows developers to track changes in their codebase, 
+collaborate with others, and manage different versions of their projects. 
+It helps in maintaining a history of code changes, making it easier to revert to previous versions if needed. 
+Git is widely used in software development and is the foundation for platforms like GitHub, 
+which provides a web-based interface for managing Git repositories.
+
+Git is decentralized, which means that every developer has a complete copy of the repository on their local machine.
+It is a MUST HAVE skill for developers, as it enables efficient collaboration and version control in software projects.
+
+
